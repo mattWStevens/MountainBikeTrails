@@ -28,6 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         pip3 freeze > requirements.txt
     - name: Run Tests
+      working-directory: /mountainbiketrails
       run: |
-        cd mountainbiketrails
         python manage.py test
