@@ -1,8 +1,22 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Mountain Bike Trails{% endblock %}
 
 {% block content %}
     <h1>My Favorite Mountain Biking Trails</h1>
-    <p>It works!</p>
+
+    <p id="image">
+        <img src="{% static 'webapp/mountainbike.png' %}">
+    </p>
+
+    <h2>My Top Ten Trails</h2>
+
+    <ul>
+        {% for trail in trails %}
+        <li>
+            {{ trail }}
+        </li>
+        {% endfor %}
+    </ul>
 {% endblock %}

@@ -1,0 +1,22 @@
+body {
+    background-color: #8442f5;
+}
+
+h1 {
+    text-align: center;
+    font-size: 56px;
+    font-family: steamer;
+    text-shadow: 2px 2px #ff0000;
+}
+
+#image {
+    text-align: center;
+}
+
+#image img {
+    width: 250px;
+}
+
+h2 {
+    text-align: center;
+}
