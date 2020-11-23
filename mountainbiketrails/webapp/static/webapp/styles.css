@@ -9,12 +9,32 @@ h1 {
     text-shadow: 2px 2px #ff0000;
 }
 
-#image {
+.center {
     text-align: center;
 }
 
-#image img {
+.center img {
     width: 250px;
+}
+
+#add_button {
+    border: 5px inset lightgreen;
+    padding: 5px;
+    background-color: green;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    color: lightgreen;
+}
+
+#add_button:hover {
+    border: 5px inset green;
+    padding: 5px;
+    background-color: lightgreen;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
 }
 
 h2 {

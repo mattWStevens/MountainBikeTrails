@@ -6,7 +6,7 @@
 {% block content %}
     <h1>My Favorite Mountain Biking Trails</h1>
 
-    <p id="image">
+    <p class="center">
         <img src="{% static 'webapp/mountainbike.png' %}">
     </p>
 
@@ -19,4 +19,8 @@
         </li>
         {% endfor %}
     </ul>
+
+    <p class="center">
+        <a id="add_button" href="{% url 'add' %}">Add New Trail</a>
+    </p>
 {% endblock %}
