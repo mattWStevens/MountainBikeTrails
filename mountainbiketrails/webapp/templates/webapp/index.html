@@ -15,7 +15,9 @@
     <ul>
         {% for trail in trails %}
         <li>
-            {{ trail }}
+            <a id="detail" href="{% url 'detail' %}">
+                {{ trail }}
+            </a>
         </li>
         {% endfor %}
     </ul>
