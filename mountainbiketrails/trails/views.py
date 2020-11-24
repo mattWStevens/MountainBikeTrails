@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Trail
 
-# Create your views here.
 def add(request):
     return render(request, "trails/add.html")
 
-def detail(request):
-    return render(request, "trails/detail.html")
+def detail(request, id):
+    trail = get_object_or_404(Trail, pk=id)
+    return render(request, "trails/detail.html", {"trail": trail})
