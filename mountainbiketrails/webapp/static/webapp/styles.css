@@ -13,12 +13,34 @@ ul {
     list-style-type: none;
 }
 
+li {
+    margin-bottom: 10px;
+}
+
 .center {
     text-align: center;
 }
 
 .center img {
     width: 250px;
+}
+
+#detail {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#detail:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#button_for_adding {
+    margin-top: 115px;
 }
 
 #add_button {
