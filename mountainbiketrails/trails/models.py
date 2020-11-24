@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator
 
 class Trail(models.Model):
     name = models.CharField(max_length=200)
@@ -7,10 +8,10 @@ class Trail(models.Model):
     state = models.CharField(max_length=200)
     country = models.CharField(max_length=200)
     visited = models.BooleanField(default=False)
-    visited_on = models.DateField()
-    difficulty_level = models.IntegerField(default=0)
-    my_rating = models.IntegerField(default=0)
+    visited_on = models.DateField(blank=True)
+    difficulty_level = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(10)])
+    my_rating = models.PositiveIntegerField(default=0, blank=True, validators=[MaxValueValidator(5)])
     top_ten = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Name: {self.name}, Location: {self.city}, {self.state}, {self.country}\nLength: {self.length}"
+        return f"Name: {self.name}, Location: {self.city}, {self.state}, {self.country}\nLength: {self.length} miles"
