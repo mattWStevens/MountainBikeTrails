@@ -1,8 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.forms import modelform_factory
 from .models import Trail
-
-TrailForm = modelform_factory(Trail, exclude=[])
+from .forms import TrailForm
 
 def add(request):
     if request.method == "POST":
