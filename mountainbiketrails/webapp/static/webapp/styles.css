@@ -38,6 +38,10 @@ li {
     width: 250px;
 }
 
+#details_paragraph {
+    font-size: 22px;
+}
+
 #detail {
     text-decoration: none;
     color: black;

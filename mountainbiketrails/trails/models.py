@@ -14,4 +14,4 @@ class Trail(models.Model):
     top_ten = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Name: {self.name}, Location: {self.city}, {self.state}, {self.country}\nLength: {self.length} miles"
+        return f"Name: {self.name} - Location: {self.city}, {self.state}, {self.country} - Length: {self.length} miles"
