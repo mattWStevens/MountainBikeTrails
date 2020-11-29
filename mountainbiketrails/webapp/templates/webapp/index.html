@@ -14,13 +14,13 @@
 
     <ul>
         {% for trail in trails %}
-        <li>
+            <li>
             {% if trail.top_ten %}
-            <a id="detail" href="{% url 'detail' trail.id %}">
-                {{ trail }}
-            </a>
+                <a id="detail" href="{% url 'detail' trail.id %}">
+                    {{ trail }}
+                </a>
             {% endif %}
-        </li>
+            </li>
         {% endfor %}
     </ul>
 
