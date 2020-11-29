@@ -1,12 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mountain Bike Trails</title>
-</head>
-<body>
-    <h1>Mountain Bike Trails</h1>
+{% extends "base.html" %}
+{% load static %}
 
-    <p>This is the starting sample template.</p>
-</body>
-</html>
+{% block title %}Mountain Bike Trails{% endblock %}
+
+{% block content %}
+    <h1>My Favorite Mountain Biking Trails</h1>
+
+    <p class="center">
+        <img src="{% static 'webapp/mountainbike.png' %}">
+    </p>
+
+    <h2>My Top Ten Trails</h2>
+
+    <ul>
+        {% for trail in trails %}
+            <li>
+            {% if trail.top_ten %}
+                <a id="detail" href="{% url 'detail' trail.id %}">
+                    {{ trail }}
+                </a>
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <p class="center" id="button_for_adding">
+        <a id="add_button" href="{% url 'add' %}">Add New Trail</a>
+    </p>
+{% endblock %}

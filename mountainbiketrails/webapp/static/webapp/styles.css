@@ -1,0 +1,119 @@
+body {
+    background-color: #8442f5;
+}
+
+h1 {
+    text-align: center;
+    font-size: 56px;
+    font-family: steamer;
+    text-shadow: 2px 2px #ff0000;
+}
+
+#add_submit {
+    margin-top: 75px;
+    font-size: 28px;
+    border: 2px solid black;
+}
+
+#add_submit:hover {
+    margin-top: 75px;
+    font-size: 28px;
+    color: white;
+    border: 2px solid white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center img {
+    width: 250px;
+}
+
+#details_paragraph {
+    font-size: 22px;
+}
+
+.mark {
+    width: 45px;
+}
+
+#fav_trails {
+    text-align: center;
+    font-weight: bold;
+    border: 5px dashed red;
+    padding: 8px;
+    display: table;
+    width: 150px;
+    margin: auto;
+}
+
+#detail {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#detail:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#button_for_adding {
+    margin-top: 115px;
+}
+
+#back {
+    border: 5px inset lightgreen;
+    padding: 5px;
+    background-color: green;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    color: lightgreen;
+}
+
+#back:hover {
+    border: 5px inset green;
+    padding: 5px;
+    background-color: lightgreen;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
+}
+
+#add_button {
+    border: 5px inset lightgreen;
+    padding: 5px;
+    background-color: green;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    color: lightgreen;
+}
+
+#add_button:hover {
+    border: 5px inset green;
+    padding: 5px;
+    background-color: lightgreen;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
+}
+
+h2 {
+    text-align: center;
+}
