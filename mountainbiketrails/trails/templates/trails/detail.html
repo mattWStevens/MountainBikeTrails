@@ -15,9 +15,16 @@
 
         <strong>Visited: </strong>
         {% if trail.visited %}
+            <img class="mark" src="{% static 'webapp/checkmark.png' %}"><br><br>
 
+            <strong>Visted On: </strong> {{ trail.visited_on }}<br><br>
+            <strong>My rating: </strong> {{ trail.my_rating }}/5<br><br>
+
+            {% if trail.top_ten %}
+                <span id="fav_trails">This is one of my top ten favorite trails!!!</span>
+            {% endif %}
         {% else %}
-
+            <img class="mark" src="{% static 'webapp/x.png' %}">
         {% endif %}
     </p>
 {% endblock %}

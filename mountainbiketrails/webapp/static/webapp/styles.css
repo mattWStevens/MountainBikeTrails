@@ -42,6 +42,20 @@ li {
     font-size: 22px;
 }
 
+.mark {
+    width: 45px;
+}
+
+#fav_trails {
+    text-align: center;
+    font-weight: bold;
+    border: 5px dashed red;
+    padding: 8px;
+    display: table;
+    width: 150px;
+    margin: auto;
+}
+
 #detail {
     text-decoration: none;
     color: black;
