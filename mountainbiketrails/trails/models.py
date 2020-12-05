@@ -8,10 +8,10 @@ class Trail(models.Model):
     state = models.CharField(max_length=200)
     country = models.CharField(max_length=200)
     visited = models.BooleanField(default=False)
-    visited_on = models.DateField(null=True, blank=True)
+    visited_on = models.DateField(null=True, blank=True, help_text="Only required if trail has been visited before.")
     difficulty_level = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(10)])
-    my_rating = models.PositiveIntegerField(default=0, blank=True, null=True, validators=[MaxValueValidator(5)])
-    top_ten = models.BooleanField(default=False, blank=True, null=True)
+    my_rating = models.PositiveIntegerField(default=0, blank=True, null=True, validators=[MaxValueValidator(5)], help_text="Only required if trail has been visited before.")
+    top_ten = models.BooleanField(default=False, blank=True, null=True, help_text="Only required if trail has been visited before.")
 
     def __str__(self):
         return f"Name: {self.name} - Location: {self.city}, {self.state}, {self.country} - Length: {self.length} miles"
