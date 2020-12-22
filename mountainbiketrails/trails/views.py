@@ -17,4 +17,9 @@ def add(request):
 
 def detail(request, id):
     trail = get_object_or_404(Trail, pk=id)
-    return render(request, "trails/detail.html", {"trail": trail})
+
+    length_string = str(trail.length) if str(round(trail.length % 1, 1)) != "0.0" else str(int(trail.length))
+
+    length_string = length_string + " mile" if length_string == "1" else length_string + " miles"
+
+    return render(request, "trails/detail.html", {"trail": trail, "length_string": length_string})

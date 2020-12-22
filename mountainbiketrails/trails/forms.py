@@ -20,3 +20,18 @@ class TrailForm(ModelForm):
             raise ValidationError("Trail cannot be a negative length.")
 
         return l
+
+    def clean(self):
+        visited = self.cleaned_data.get('visited')
+        fields = ['visited_on', 'my_rating', 'top_ten']
+
+        if visited:
+            self.fields_required(fields)
+
+        return self.cleaned_data
+
+    def fields_required(self, fields):
+        for field in fields:
+            if not self.cleaned_data.get(field, ''):
+                msg = ValidationError("This field is required.")
+                self.add_error(field, msg)
