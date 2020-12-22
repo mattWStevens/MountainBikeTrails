@@ -14,4 +14,5 @@ class Trail(models.Model):
     top_ten = models.BooleanField(default=False, blank=True, null=True, help_text="Only required if trail has been visited before.")
 
     def __str__(self):
-        return f"Name: {self.name} - Location: {self.city}, {self.state}, {self.country} - Length: {self.length} miles"
+        length_string = str(self.length) if str(round(self.length % 1, 1)) != "0.0" else str(int(self.length))
+        return f"Name: {self.name} - Location: {self.city}, {self.state}, {self.country} - Length: {length_string} miles"
