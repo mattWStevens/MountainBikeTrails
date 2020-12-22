@@ -15,4 +15,6 @@ class Trail(models.Model):
 
     def __str__(self):
         length_string = str(self.length) if str(round(self.length % 1, 1)) != "0.0" else str(int(self.length))
-        return f"Name: {self.name} - Location: {self.city}, {self.state}, {self.country} - Length: {length_string} miles"
+        length_string = length_string + " mile" if length_string == "1" else length_string + " miles"
+
+        return f"Name: {self.name} - Location: {self.city}, {self.state}, {self.country} - Length: {length_string}"
